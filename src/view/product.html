@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DNTN Bột Mì Vi Vi</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../../asset/img/logo.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../asset/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../../asset/css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="../../asset/css/style.css">
+</head>
+
+<body class="grey lighten-3">
+
+    <!-- Start your project here-->
+    <header>
+        <div class="sidebar-fixed position-fixed">
+            <a href="order.html">
+                <h1 class="py-3 waves-effect text-center text-danger font-weight-bolder">DNTN VI VI</h1>
+            </a>
+            <div class="list-group list-group-flush">
+                <a href="order.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-file-alt mr-3"></i>Đơn Hàng
+                </a>
+                <a href="customer.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-user mr-3"></i>Khách Hàng</a>
+                <a href="product.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-table mr-3"></i>Sản Phẩm</a>
+                <a href="inventory.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-warehouse mr-3"></i>Kho</a>
+                <a href="debt.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-money-bill-alt mr-3"></i>Công Nợ</a>
+            </div>
+
+        </div>
+    </header>
+    <!-- End your project here-->
+    <main class="pt-5 mt-5">
+        <div class="container-fluid">
+            <div class="card mb-4 wow fadeIn fixed-top d-flex">
+                <!--Card content-->
+                <div class="card-body d-sm-flex justify-content-between ">
+                    <h4 class="mb-2 mb-sm-0 pt-1 font-weight-bold text-danger">
+                        SẢN PHẨM
+                    </h4>
+                    <div class="d-flex justify-content-center">
+                        <!-- Default input -->
+                        <input type="search" placeholder="Nhập tên sản phẩm" aria-label="Search" class="form-control"
+                            id="searchProductInput">
+                        <button class="btn btn-danger btn-sm my-0" id="btnSearchProduct">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Grid row-->
+            <div class="row wow fadeIn">
+                <!--Grid column-->
+                <div class="col-md-7 mb-4 pr-0">
+                    <!--Card-->
+                    <div class="card">
+                        <div class="card-header text-center font-weight-bold">
+                            DANH SÁCH SẢN PHẨM
+                        </div>
+                        <!--Card content-->
+                        <div class="card-body table-wrapper-scroll-y my-custom-scrollbar">
+                            <table id="productTable" class="table table-bordered table-striped rounded">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Mã SP</th>
+                                        <th>Tên SP</th>
+                                        <th>Qui Cách</th>
+                                        <th>Số Kg</th>
+                                        <th>Giá bán lẻ</th>
+                                        <th>Giá bán sỉ</th>
+                                        <th>Nhà Máy</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productTbody">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-5 mb-4">
+
+                    <!--Card-->
+                    <div class="card mb-4">
+                        <!-- Card header -->
+                        <div class="card-header text-center font-weight-bold">
+                            THÔNG TIN SẢN PHẨM
+                        </div>
+                        <!--Card content-->
+                        <div class="card-body">
+                            <div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="code">Mã Sản Phẩm</label>
+                                        <input type="text" class="form-control isRequired clearInput" id="productCodeInput"
+                                            placeholder="vvd" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="productName">Tên Sản Phẩm</label>
+                                        <input type="text" class="form-control isRequired clearInput" id="productNameInput"
+                                            placeholder="Vi Vi Đỏ" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="ncc">Nhà Cung Cấp</label>
+                                        <select class="form-control" id="productProviderInput"></select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Quy Cách</label>
+                                        <select id="productPackagingInput" class="form-control">
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="weight">Trọng Lượng (kg)</label>
+                                        <select id="productNetweightInput" class="form-control">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="ncc">Giá Bán Lẻ</label>
+                                        <input type="number" class="form-control isRequired clearInput" id="productRetailPriceInput"
+                                            placeholder="10,000" required>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Giá Bán Sỉ</label>
+                                        <input type="number" class="form-control isRequired clearInput" id="productWholeSalePriceInput"
+                                            placeholder="10,600" required>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-danger btn-lg d-none"
+                                    id="btnUpdateProduct">LƯU</button>
+                                <button type="button" class="btn btn-danger btn-lg" id="btnAddProduct">THÊM</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+        </div>
+    </main>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../../asset/js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../asset/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../asset/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../asset/js/mdb.min.js"></script>
+    <!-- UUID -->
+    <script type="text/javascript" src="../../asset/js/jquery-uuid.js"></script>
+    <!-- Date Format -->
+    <script type="text/javascript" src="../../asset/js/moment.js"></script>
+    <!-- My custom scripts -->
+    <script src="../controller/storage.js"></script>
+    <script src="../controller/ui.js"></script>
+    <script src="../controller/main.js"></script>
+    <script src="../controller/product.js"></script>
+
+</body>
+
+</html>

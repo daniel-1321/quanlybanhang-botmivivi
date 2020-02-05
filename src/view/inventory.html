@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DNTN Bột Mì Vi Vi</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../../asset/img/logo.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../asset/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../../asset/css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="../../asset/css/style.css">
+</head>
+
+<body class="grey lighten-3">
+
+    <!-- Start your project here-->
+    <header>
+        <div class="sidebar-fixed position-fixed">
+            <a href="order.html">
+                <h1 class="py-3 waves-effect text-center text-danger font-weight-bolder">DNTN VI VI</h1>
+            </a>
+            <div class="list-group list-group-flush">
+                <a href="order.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-file-alt mr-3"></i>Đơn Hàng
+                </a>
+                <a href="customer.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-user mr-3"></i>Khách Hàng</a>
+                <a href="product.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-table mr-3"></i>Sản Phẩm</a>
+                <a href="inventory.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-warehouse mr-3"></i>Kho</a>
+                <a href="debt.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-money-bill-alt mr-3"></i>Công Nợ</a>
+            </div>
+
+        </div>
+    </header>
+    <!-- End your project here-->
+    <main class="pt-5 mt-5">
+        <div class="container-fluid">
+            <div class="card mb-4 wow fadeIn fixed-top">
+                <!--Card content-->
+                <div class="card-body d-sm-flex justify-content-between ">
+                    <h4 class="mb-2 mb-sm-0 pt-1 font-weight-bold text-danger">
+                        QUẢN LÝ KHO
+                    </h4>
+                </div>
+            </div>
+            <ul class="nav nav-tabs md-tabs" id="myTabEx" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active text-danger font-weight-bold show" id="home-tab-ex" data-toggle="tab"
+                        href="#tabNhapKho" role="tab" aria-controls="home-ex" aria-selected="true">Nhập Kho</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger font-weight-bold" id="profile-tab-ex" data-toggle="tab"
+                        href="#tabPhieuNhap" role="tab" aria-controls="profile-ex" aria-selected="false">Phiếu Nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger font-weight-bold" id="contact-tab-ex" data-toggle="tab"
+                        href="#tabTonKho" role="tab" aria-controls="contact-ex" aria-selected="false">Tồn Kho</a>
+                </li>
+            </ul>
+            <div class="tab-content pt-3" id="myTabContentEx">
+                <div class="tab-pane fade active show" id="tabNhapKho" role="tabpanel" aria-labelledby="home-tab-ex">
+                    <!--Grid row-->
+                    <div class="row wow fadeIn">
+                        <!--Grid column-->
+                        <div class="col-md-6 mb-4 pr-0">
+                            <!--Card-->
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-center">
+                                        <!-- Default input -->
+                                        <input type="search" placeholder="Nhập tên sản phẩm" aria-label="Search"
+                                            class="form-control" id="searchProductInput">
+                                        <button class="btn btn-danger btn-sm my-0" id="btnSearchProduct">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!--Card content-->
+                                <div class="card-body table-wrapper-scroll-y my-custom-scrollbar">
+                                    <table id="productTable" class="table table-bordered table-striped rounded"
+                                        style="width:100%">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Tên SP</th>
+                                                <th>Số lượng</th>
+                                                <th>Ngày SX</th>
+                                                <th>Chọn</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="productTbody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--/.Card-->
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card mb-4">
+                                <!-- Card header -->
+                                <div class="card-header text-center font-weight-bolder">
+                                    PHIẾU NHẬP KHO
+                                </div>
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <label for="importDate">NGÀY NHẬP : <input type="date"
+                                            class="datepicker rounded currentDateInput"></label>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Tên Tài Xế</label>
+                                            <input type="text" class="form-control isRequired clearInput"
+                                                id="driverNameInput" placeholder="Nguyễn Văn A">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Số xe</label>
+                                            <input type="text" class="form-control isRequired clearInput"
+                                                id="licensePlateInput" placeholder="00H-123456">
+                                        </div>
+                                    </div>
+                                    <table id="importCartTable" class="table table-bordered table-striped rounded">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Tên SP</th>
+                                                <th>Số Kg</th>
+                                                <th>Số Lượng</th>
+                                                <th>Tổng Kg</th>
+                                                <th>Ngày Sản Xuất</th>
+                                                <th>Xoá</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cartTbody">
+
+                                        </tbody>
+                                    </table>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label>Ghi Chú <small> (Tuỳ Chọn)</small></label>
+                                            <textarea class="form-control clearInput" id="importNoteInput"
+                                                placeholder="Vd: 2 bao rách"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger btn-lg"
+                                            id="btnSaveCart">LƯU</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Card-->
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <div class="tab-pane fade" id="tabPhieuNhap" role="tabpanel" aria-labelledby="profile-tab-ex">
+                    <div class="row wow fadeIn">
+                        <div class="col-md-12 mb-4">
+                            <div class="card mb-4">
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-inline-flex">
+                                        <!-- Default input -->
+                                        <input type="date" class="datepicker form-control currentDateInput w-50 mr-2"
+                                            id="searchImportDateInput">
+                                        <input type="search" placeholder="Nhập số xe" aria-label="Search"
+                                            class="form-control" id="searchLicensePlateInput">
+                                        <button class="btn btn-danger btn-sm my-0" id="btnSearchImportList">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                        
+                                    </div>
+                                    <div class="">
+                                        <button class="btn btn-success btn-sm my-0" id="btnPrintImportList">
+                                            <i class="fas fa-print fa-2x"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body table-wrapper-scroll-y my-custom-scrollbar px-5" id="importListPrint">
+                                    <h3 class="text-center">DANH SÁCH PHIẾU NHẬP KHO NGÀY <label for="" id="importDatelbl"></label></h3>
+                                    <table class="table table-bordered rounded" id="importListTable">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Tài Xế</th>
+                                                <th>Số Xe</th>
+                                                <th>Chi Tiết</th>
+                                                <th>Ghi Chú</th>
+                                                <th>Xoá</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="importListTbody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabTonKho" role="tabpanel" aria-labelledby="contact-tab-ex">
+                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+                        retro
+                        fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+                        iphone
+                        skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                        Leggings
+                        gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork
+                        biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them,
+                        vinyl
+                        craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../../asset/js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../asset/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../asset/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../asset/js/mdb.min.js"></script>
+    <!-- UUID -->
+    <script type="text/javascript" src="../../asset/js/jquery-uuid.js"></script>
+    <!-- Date Format -->
+    <script type="text/javascript" src="../../asset/js/moment.js"></script>
+    <!-- Print -->
+    <script type="text/javascript" src="../../asset/js/printThis.js"></script>
+
+    <!-- My custom scripts -->
+    <script src="../controller/report.js"></script>
+    <script src="../controller/storage.js"></script>
+    <script src="../controller/ui.js"></script>
+    <script src="../controller/main.js"></script>
+    <script src="../controller/inventory.js"></script>
+</body>
+
+</html>

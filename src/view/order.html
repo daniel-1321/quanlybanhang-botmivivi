@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DNTN Bột Mì Vi Vi</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../../asset/img/logo.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../asset/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../../asset/css/mdb.min.css">
+    <!-- Stepper -->
+    <link rel="stylesheet" href="../../asset/css/stepper.css">
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="../../asset/css/style.css">
+</head>
+
+<body class="grey lighten-3">
+
+    <!-- Start your project here-->
+    <header>
+        <div class="sidebar-fixed position-fixed">
+            <a href="order.html">
+                <h1 class="py-3 waves-effect text-center text-danger font-weight-bolder">DNTN VI VI</h1>
+            </a>
+            <div class="list-group list-group-flush">
+                <a href="order.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-file-alt mr-3"></i>Đơn Hàng
+                </a>
+                <a href="customer.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-user mr-3"></i>Khách Hàng</a>
+                <a href="product.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-table mr-3"></i>Sản Phẩm</a>
+                <a href="inventory.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-warehouse mr-3"></i>Kho</a>
+                <a href="debt.html" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-money-bill-alt mr-3"></i>Công Nợ</a>
+            </div>
+
+        </div>
+    </header>
+    <!-- End your project here-->
+    <main class="pt-5 mt-5">
+        <div class="container-fluid">
+            <div class="card wow fadeIn fixed-top">
+                <!--Card content-->
+                <div class="card-body d-sm-flex justify-content-between ">
+                    <h4 class="mb-2 mb-sm-0 pt-1 font-weight-bold text-danger">
+                        TẠO ĐƠN HÀNG
+                    </h4>
+                </div>
+            </div>
+            <!--Grid row-->
+            <div class="row wow fadeIn">
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+                    <!--Card-->
+                    <div class="card mb-4">
+                        <!-- Card header -->
+                        <div class="card-header text-center">
+                            <div class="d-flex justify-content-center">
+                                <!-- Default input -->
+                                <input type="search" placeholder="Nhập tên Khách Hàng" aria-label="Search"
+                                    class="form-control" id="searchCustomerInput">
+                                <button class="btn btn-danger btn-sm my-0 ml-3" id="btnSearchCustomer">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!--Card content-->
+                        <div class="card-body table-wrapper-scroll-y my-custom-scrollbar">
+                            <table id="customerTable" class="table table-bordered table-striped rounded"
+                                style="width:100%">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th class="align-middle">TÊN KHÁCH HÀNG</th>
+                                        <th class="align-middle">NỢ GÓP</th>
+                                        <th class="align-middle">NỢ GỐI ĐẦU</th>
+                                        <th class="align-middle">NỢ CŨ</th>
+                                        <th class="align-middle">#</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="customerTbody">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <div class="col-md-6 mb-4">
+                    <!--Card-->
+                    <div class="card mb-4">
+                        <!-- Card header -->
+                        <div class="card-header text-center">
+                            <div class="d-flex justify-content-center">
+                                <!-- Default input -->
+                                <input type="search" placeholder="Nhập tên Sản Phẩm" aria-label="Search"
+                                    class="form-control" id="searchProductInput">
+                                <button class="btn btn-danger btn-sm my-0 ml-3" id="btnSearchProduct">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!--Card content-->
+                        <div class="card-body table-wrapper-scroll-y my-custom-scrollbar">
+                            <table id="productTable" class="table table-bordered table-striped rounded"
+                                style="width:100%">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th class="align-middle">TÊN SẢN PHẨM</th>
+                                        <th class="align-middle">SỐ KG</th>
+                                        <th class="align-middle">TỒN KHO</th>
+                                        <th class="align-middle">SỐ LƯỢNG</th>
+                                        <th class="align-middle">CHỌN</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="productTbody">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+            <!--Grid row-->
+            <div class="row wow fadeIn container mx-auto">
+                <!--Grid column-->
+                <div class="col-md-12 mb-4">
+                    <!--Card-->
+                    <div class="card mb-4">
+                        <!-- Card header -->
+                        <div class="card-header text-center bg-danger text-white font-weight-bold">
+                            THÔNG TIN ĐƠN HÀNG
+                        </div>
+                        <!--Card content-->
+                        <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" id="orderPrinting">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="font-weight-bold">DNTN VI VI</h5>
+                                <h4 class="font-weight-bold text-center">HOÁ ĐƠN BÁN HÀNG</h4>
+                                <h5>Ngày giao: <span class="font-weight-bold" id="currentDate">17/01/2020</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+    </main>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../../asset/js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../asset/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../asset/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../asset/js/mdb.min.js"></script>
+    <!-- UUID -->
+    <script type="text/javascript" src="../../asset/js/jquery-uuid.js"></script>
+    <!-- Date Format -->
+    <script type="text/javascript" src="../../asset/js/moment.js"></script>
+    <!-- Print -->
+    <script type="text/javascript" src="../../asset/js/printThis.js"></script>
+    <!-- Stepper -->
+    <script type="text/javascript" src="../../asset/js/steppers.min.js"></script>
+
+    <!-- My custom scripts -->
+    <script src="../controller/report.js"></script>
+    <script src="../controller/storage.js"></script>
+    <script src="../controller/ui.js"></script>
+    <script src="../controller/main.js"></script>
+    <script src="../controller/order.js"></script>
+</body>
+
+</html>
